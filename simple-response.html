@@ -1,0 +1,423 @@
+<script src="/bcel/resources/js_data/exchange_rate.js"></script>
+<div class="container margin-20" id="render-head">
+  <div class="row">
+    <div class="col-sm-9">
+      <h3 class="title">ອັດຕາແລກປ່ຽນເງິນຕາ</h3>
+      <hr />
+
+      <div class="row">
+        <div class="col-md-4">
+          <label class=""><strong>ປະຈໍາວັນທີ: 2023-09-13</strong></label>
+        </div>
+
+        <div class="col-md-4">
+          <label class="xred">ເລືອກ ວັນທີ: </label>
+          <input
+            class=""
+            maxlength="15"
+            type="text"
+            id="datepicker"
+            value="2023-09-13"
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label class="xred"> ຄັ້ງທີ:</label>
+
+          <select class="" id="round">
+            <option value="1" selected>1</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-responsive" id="resp-tables">
+        <table id="fxRateAll" class="table table-striped cf tablewith">
+          <thead class="cf">
+            <tr class="bggrey">
+              <th rowspan="2"><b>ປະເພດສະກຸນເງິນ</b></th>
+              <th rowspan="2"><b>ປະເທດ</b></th>
+              <th rowspan="2"><b>ລະຫັດສະກຸນເງິນ</b></th>
+              <th colspan="3"><b>ອັດຕາຊື້</b></th>
+              <th rowspan="2" align="right"><b>ອັດຕາຂາຍ</b></th>
+            </tr>
+            <tr>
+              <td align="right" class="numeric2"><b>NOTE</b></td>
+              <td align="right" class="numeric2"><b>BILL</b></td>
+              <td align="right" class="numeric2"><b>EFT</b></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">US Dollar</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/USD.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">USD 1-20</td>
+              <td data-title="NOTE" align="right">19,790</td>
+              <td data-title="BILL" align="right">19,791</td>
+              <td data-title="EFT" align="right">19,793</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">19,920</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">US Dollar</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/USD.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">USD 50-100</td>
+              <td data-title="NOTE" align="right">19,791</td>
+              <td data-title="BILL" align="right">19,791</td>
+              <td data-title="EFT" align="right">19,793</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">19,920</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Thai Baht</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/THB.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">THB</td>
+              <td data-title="NOTE" align="right">583.29</td>
+              <td data-title="BILL" align="right">583.29</td>
+              <td data-title="EFT" align="right">583.34</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">589.12</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Euro</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/EUR.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">EUR 1-20</td>
+              <td data-title="NOTE" align="right">21,253</td>
+              <td data-title="BILL" align="right">21,254</td>
+              <td data-title="EFT" align="right">21,256</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">21,467</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Euro</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/EUR.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">EUR 50-500</td>
+              <td data-title="NOTE" align="right">21,254</td>
+              <td data-title="BILL" align="right">21,254</td>
+              <td data-title="EFT" align="right">21,256</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">21,467</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Pound Sterling</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/GBP.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">GBP</td>
+              <td data-title="NOTE" align="right">24,415</td>
+              <td data-title="BILL" align="right">24,415</td>
+              <td data-title="EFT" align="right">24,417</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">24,903</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">
+                Australian Dollar
+              </td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/AUD.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">AUD</td>
+              <td data-title="NOTE" align="right">12,639</td>
+              <td data-title="BILL" align="right">12,639</td>
+              <td data-title="EFT" align="right">12,641</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">12,892</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Canadian Dollar</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/CAD.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">CAD</td>
+              <td data-title="NOTE" align="right">13,095</td>
+              <td data-title="BILL" align="right">13,095</td>
+              <td data-title="EFT" align="right">13,097</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">13,356</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Japanese Yen</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/JPY.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">JPY</td>
+              <td data-title="NOTE" align="right">132.76</td>
+              <td data-title="BILL" align="right">132.76</td>
+              <td data-title="EFT" align="right">132.82</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">135.41</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Swiss Franc</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/CHF.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">CHF</td>
+              <td data-title="NOTE" align="right">19,744</td>
+              <td data-title="BILL" align="right">19,744</td>
+              <td data-title="EFT" align="right">19,746</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">20,139</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Renminbi Yuan</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/CNY.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">CNY</td>
+              <td data-title="NOTE" align="right">2,739</td>
+              <td data-title="BILL" align="right">2,739</td>
+              <td data-title="EFT" align="right">2,741</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">2,766</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Danish Krone</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/DKK.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">DKK</td>
+              <td data-title="NOTE" align="right">-</td>
+              <td data-title="BILL" align="right">-</td>
+              <td data-title="EFT" align="right">2,958</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">3,016</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Norwegian Krone</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/NOK.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">NOK</td>
+              <td data-title="NOTE" align="right">-</td>
+              <td data-title="BILL" align="right">-</td>
+              <td data-title="EFT" align="right">1,987</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">2,026</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Swedish Krona</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/SEK.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">SEK</td>
+              <td data-title="NOTE" align="right">-</td>
+              <td data-title="BILL" align="right">-</td>
+              <td data-title="EFT" align="right">2,097</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">2,139</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Singapore Dollar</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/SGD.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">SGD</td>
+              <td data-title="NOTE" align="right">13,322</td>
+              <td data-title="BILL" align="right">13,322</td>
+              <td data-title="EFT" align="right">13,324</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">13,587</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">HongKong Dollar</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/HKD.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">HKD</td>
+              <td data-title="NOTE" align="right">-</td>
+              <td data-title="BILL" align="right">-</td>
+              <td data-title="EFT" align="right">2,929</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">2,987</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Vietnamese Dong</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/VND.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">VND</td>
+              <td data-title="NOTE" align="right">-</td>
+              <td data-title="BILL" align="right">-</td>
+              <td data-title="EFT" align="right">0.8508</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">0.8677</td>
+            </tr>
+
+            <tr>
+              <td data-title="ປະເພດສະກຸນເງິນ" align="left">Korean Won</td>
+              <td data-title="ປະເທດ" align="left">
+                <img src="resources/imgs/flag/KRW.png" class="ccy-logo" />
+              </td>
+              <td data-title="ລະຫັດສະກຸນເງິນ" align="left">KRW</td>
+              <td data-title="NOTE" align="right">13.96</td>
+              <td data-title="BILL" align="right">13.96</td>
+              <td data-title="EFT" align="right">14.01</td>
+              <td data-title="ອັດຕາຂາຍ" align="right">14.23</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <br />
+      <b>BILL: </b>Sight bill, cashier&#39;s Check, Traveller&#39;s Check, Money
+      Order, Postal Order(Mandate).
+      <br />
+      <b>EFT: </b>ໂອນເງິນຜ່ານອີເລັກໂທຣນິກ(Money Gram,BCEL ONE,I-BANK),
+      ແລກປ່ຽນເງິນຕາຜ່ານບັນຊີ.
+      <br />
+      <br />
+
+      <p>
+        <b>ໝາຍເຫດ: </b>ອັດຕາແລກປ່ຽນແຕ່ລະສະກຸນຂ້າງເທີງນີ້
+        ອາດມີການປ່ຽນແປງໄດ້ຫຼາຍຄັ້ງໃນລະຫວ່າງວັນ
+        ໂດຍທີ່ບໍ່ມີການແຈ້ງໃຫ້ຮູ້ລ່ວງໜ້າຖ້າ ທ່ານສາມາດຮູ້ອັດ ຕາແລກປ່ຽນໄດ້ ທີ່
+        www.bcel.com.la . ກະລຸນາຕິດຕໍ່ ຂະແໜງບໍລິຫານຊັບສິນ-ໜີ້ສິນ ໂທລະສັບ:
+        (856-21) 262614 ເພື່ອຢືນຢັນອັດຕາແລກປ່ຽນເມື່ອມີການແລກປ່ຽນເກີນ USD 5,000
+        (ຫຼືທຽບເທົ່າ) ຫຼືສະກຸນເງິນທີ່ບໍ່ໄດ້ສະແດງອັດຕາແລກ ປ່ຽນຢູ່ຂ້າງເທິງນີ້.
+      </p>
+    </div>
+
+    <div class="col-sm-3 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
+        <div class="list-group">
+          <span id=""
+            ><a href="exchange-rate.html" class="list-group-item active">
+              ອັດຕາແລກປ່ຽນເງິນຕາ</a
+            ></span
+          >
+          <span id=""
+            ><a href="interest.html?fid=fx-rate" class="list-group-item"
+              >ດາວໂຫລດ ອັດຕາແລກປ່ຽນເງິນຕາ</a
+            ></span
+          >
+          <span id=""
+            ><a
+              href="interest.html?fid=deposit-interest"
+              class="list-group-item"
+              >ອັດຕາດອກເບ້ຍເງິນຝາກ</a
+            ></span
+          >
+          <span id=""
+            ><a href="interest.html?fid=loan-interest" class="list-group-item"
+              >ອັດຕາດອກເບ້ຍເງິນກູ້</a
+            ></span
+          >
+          <span id=""
+            ><a href="interest.html?fid=other-fee" class="list-group-item"
+              >ອັດຕາຄ່າທຳນຽມຕ່າງໆແລະອື່ນໆ</a
+            ></span
+          >
+          <span id=""
+            ><a href="calculator.html" class="list-group-item"
+              >ເຄື່ອງຄຳນວນອັດຕາຕ່າງໆ
+            </a></span
+          >
+        </div>
+      </div>
+
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>ແຊໜ້ານີ້</h4>
+        <ol class="list-unstyled">
+          <li>
+            <a
+              href="http://twitter.com/home?status=https%3a%2f%2fwww.bcel.com.la%2fbcel%2f%2fdetail-exchange-rate"
+              title="Share on Twitter"
+              class="btn btn-twitter"
+              onclick="window.open(this.href, 'windowName', 'width=500, height=600, left=50, top=50, scrollbars, resizable'); return false;"
+              ><i class="fa fa-twitter"></i> Twitter</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.bcel.com.la%2fbcel%2f%2fdetail-exchange-rate"
+              title="Share on Facebook"
+              class="btn btn-facebook"
+              onclick="window.open(this.href, 'windowName', 'width=500, height=600, left=50, top=50, scrollbars, resizable'); return false;"
+              ><i class="fa fa-facebook"></i> Facebook</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://plus.google.com/share?url=https%3a%2f%2fwww.bcel.com.la%2fbcel%2f%2fdetail-exchange-rate"
+              title="Share on Google+"
+              class="btn btn-googleplus"
+              onclick="window.open(this.href, 'windowName', 'width=500, height=600, left=50, top=50, scrollbars, resizable'); return false;"
+              ><i class="fa fa-google-plus"></i> Google+</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fwww.bcel.com.la%2fbcel%2f%2fdetail-exchange-rate"
+              title="Share on StumbleUpon"
+              data-placement="top"
+              class="btn btn-stumbleupon"
+              onclick="window.open(this.href, 'windowName', 'width=500, height=650, left=50, top=50, scrollbars, resizable'); return false;"
+              ><i class="fa fa-stumbleupon"></i> Stumbleupon</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fwww.bcel.com.la%2fbcel%2f%2fdetail-exchange-rate&title=&summary="
+              title="Share on LinkedIn"
+              class="btn btn-linkedin"
+              onclick="window.open(this.href, 'windowName', 'width=500, height=600, left=50, top=50, scrollbars, resizable'); return false;"
+            >
+              <i class="fa fa-linkedin"></i> LinkedIn</a
+            >
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/bcel/resources/js/bootstrap-datepicker.js"></script>
+<script>
+  $("#datepicker, #datepicker2").datepicker({
+    format: "yyyy-mm-dd",
+    endDate: "+0d",
+    autoclose: true,
+  });
+  $("#datepicker, #datepicker2").on("changeDate", function (ev) {
+    $(this).datepicker("hide");
+  });
+</script>
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    (i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date());
+    (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "//www.google-analytics.com/analytics.js",
+    "ga"
+  );
+
+  ga("create", "UA-66067779-1", "auto");
+  ga("send", "pageview");
+</script>

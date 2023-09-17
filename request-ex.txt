@@ -1,0 +1,3 @@
+curl --location 'https://www.bcel.com.la/bcel/detail-exchange-rate' \
+--form 'exDate="2023-09-13"' \
+--form 'round="1"'
